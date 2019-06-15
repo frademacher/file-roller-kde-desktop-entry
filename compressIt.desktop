@@ -15,13 +15,12 @@
 
 [Desktop Entry]
 Type=Service
-ServiceTypes=KonqPopupMenu/Plugin
-MimeType=application/zip;application/x-tar;application/x-gtar;application/x-xz;application/x-rar-compressed;application/x-ace-compressed;application/x-7z-compressed;application/gzip;application/x-bzip2;application/x-arj;application/x-lzh;application/x-lzma;application/vnd.debian.binary-package;application/x-rpm;
-Actions=extractHere
+ServiceTypes=KonqPopupMenu/Plugin,inode/directory,all/allfiles
+Actions=compressIt
 X-KDE-Priority=TopLevel
 
-[Desktop Action extractHere]
-Name=Extract here
-Name[de]=Hier entpacken
-Exec=file-roller -h %u
-Icon=/usr/share/icons/Mint-Y/actions/22/extract-archive.svg
+[Desktop Action compressIt]
+Name=Compress
+Name[de]=Komprimieren
+Exec=create_zip.py %U
+Icon=/usr/share/icons/Mint-Y/apps/64/file-roller
